@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Гитары. Добавить</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Добавление гитары</h1>
+    </div>
+    <div class="article">
+        <form name="new_guitar">
+			<h2>Название</h2>
+			<input size=40 name="guitar_title" class="text-field">
+			<h2>Описание</h2>
+			<textarea name="guitar_description" rows="6" cols=70>		
+			</textarea>
+			<h2>Форма грифа</h2>
+			<select name="guitar_form">
+				<option value="1">Stratocaster</option>
+				<option value="2">Les Paul</option>
+				<option value="3">Superstrat</option>
+                <option value="4">Jaguar</option>
+                <option value="5">Telecaster</option>				
+			</select>
+			<hr>
+			<input type="submit" value="Сохранить" class="my-button" onClick="process()">
+            <input type="button" value="Очистить" class="my-button" onClick="clean()">
+		</form>		
+    </div>
+    <div id="process">
+
+    </div>
+    <hr>
+    <div class="footer">
+    &copy; 2024. Иванов Павел. Все права защищены
+    </div>
+</body>
+<script>
+    function clean(){
+        alert("Очищяй!");
+    }
+    function process(){
+        var guitar_title=document.new_guitar.guitar_title.value;
+        var guitar_description=document.new_guitar.guitar_description.value;
+        var guitar_type=document.new_guitar.guitar_form.value;
+        var dataElem="<b>Название гитары:</b>"+guitar_title+"<br>";
+        dataElem+="<b>Описание гитары:</b><br>"+guitar_description+"<br>";
+        var form_name="test";
+        if(guitar_form==1){
+            form_name="Stratocaster";			
+        }
+        else if(guitar_form==2){
+            form_name="Les Paul";
+        }
+        else if(guitar_form==3){
+            form_name="Superstrat";
+        }
+        else if(guitar_form==4){
+            form_name="Jaguar";
+        }
+        else{
+            form_name="Telecaster";
+        }
+        
+        alert("!");
+        dataElem+="<b>Форма грифа:</b>"+form_name+"<hr>";
+        document.getElementById('process').classList.add("outblock");
+        document.getElementById('process').innerHTML+=dataElem;
+    }
+  </script>
+</html>
