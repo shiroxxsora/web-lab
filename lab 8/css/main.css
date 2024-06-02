@@ -1,0 +1,47 @@
+.header{
+    background-color:bisque;
+    width: 80%;
+    height: 150px;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+}
+.outblock{
+    width: 300px;
+    border: 1px solid;
+    padding: 10px 20px;
+}
+.article{
+    display: block;
+    width: 80%;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.info{
+	font-style: italic;
+	font-size:14;
+}
+.footer{
+    background-color:bisque;
+    text-align: right;
+    align-content: center;
+    height: 50px;
+}
+.display-flex{
+    display: flex;
+}
+.my-button{
+    transition: .5s;
+    padding: 5px 15px;
+    font-size: 24px;
+    border: none;
+    
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background:linear-gradient(90deg, white 0%, yellow 25%, orange 80%, red 145%);
+    background-size: 200% auto;
+}
+.my-button:hover{
+    background-position: right center;
+}
